@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Holi Love Surprise</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+}
+
+/* Romantic Text */
+.love{
+font-size:28px;
+color:pink;
+text-shadow:0 0 15px red;
+margin-top:15px;
+animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+from{color:white;}
+to{color:#ff4d6d;}
+}
+
+/* Music Button */
+button{
+padding:12px 25px;
+font-size:18px;
+background:pink;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin:10px;
+}
+
+/* Slideshow */
+.slideshow{
+position:relative;
+width:320px;
+height:400px;
+margin:20px auto;
+}
+.slideshow img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 0 20px white;
+opacity:0;
+animation:slide 36s infinite;
+}
+
+.slideshow img:nth-child(1){animation-delay:0s;}
+.slideshow img:nth-child(2){animation-delay:3s;}
+.slideshow img:nth-child(3){animation-delay:6s;}
+.slideshow img:nth-child(4){animation-delay:9s;}
+.slideshow img:nth-child(5){animation-delay:12s;}
+.slideshow img:nth-child(6){animation-delay:15s;}
+.slideshow img:nth-child(7){animation-delay:18s;}
+.slideshow img:nth-child(8){animation-delay:21s;}
+.slideshow img:nth-child(9){animation-delay:24s;}
+.slideshow img:nth-child(10){animation-delay:27s;}
+.slideshow img:nth-child(11){animation-delay:30s;}
+.slideshow img:nth-child(12){animation-delay:33s;}
+
+@keyframes slide{
+0%{opacity:0;transform:scale(0.9);}
+5%{opacity:1;}
+20%{opacity:1;}
+25%{opacity:0;transform:scale(1.1);}
+100%{opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<h1>🌸 Happy Holi 🌸</h1>
+
+<div class="love">
+❤️ I LOVE U MERI BABY ❤️ <br>
+💖 AAP MERI JAAN HO 💖 <br>
+✨ ALWAYS AISE HI HSTI RHO ✨
+</div>
+
+<button onclick="playMusic()">▶ Play Music</button>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="slideshow">
+<img src="1.jpg">
+<img src="2.jpg">
+<img src="3.jpg">
+<img src="4.jpg">
+<img src="5.jpg">
+<img src="6.jpg">
+<img src="7.jpg">
+<img src="8.jpg">
+<img src="9.jpg">
+<img src="10.jpg">
+<img src="11.jpg">
+<img src="12.jpg">
+</div>
+
+<script>
+function playMusic(){
+document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
